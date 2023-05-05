@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		.text {
+			width: 100px;
+			height: 100px;
+			background-color: aliceblue;
+		}
+	</style>
+	<script src="./vue.js"></script>
+</head>
+<body>
+<div id="app"><p>{{arr}}</p><button id="btn">修改数据</button></div>
+
+<script>
+	const vm = new View({
+		el: '#app',
+		data: {
+			name: 'pomelo',
+			age: 18,
+			arr: [1,2,3,4,5]
+		},
+		props: {
+			age: Number,
+			name: {
+				type: [Number, String],
+				default: '张三'
+			},
+			person: {
+				type: String,
+				default(){
+					return '123'
+				}
+			}
+		},
+		computed: {
+			//计算属性是watcher
+			person:{
+				get(){
+					console.log('1')
+					return function(){
+						console.log('1')
+						return 1
+					}
+				}
+			},
+		},
+		methods: {
+			clickBtn(){
+				this.age = 20
+			}
+		},
+		watch: {
+			age(nv,ov){
+			
+			}
+		}
+	})
+	
+	
+
+</script>
+</body>
+</html>
