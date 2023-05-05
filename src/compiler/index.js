@@ -11,7 +11,7 @@ export const createCompiler = createCompilerCreator((templates, options = {}) =>
 	* */
 	if (options.optimize !== false) {
 		optimize(ast, options)
-	}    回gyiuguygiughjghjbghvvb 
+	}
 	/*
 	* @todo 暂时只做简单的生成
 	* */

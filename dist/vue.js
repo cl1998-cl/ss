@@ -2487,11 +2487,10 @@
     * */
 
     if (options.optimize !== false) ;
-
-    回gyiuguygiughjghjbghvvb;
     /*
     * @todo 暂时只做简单的生成
     * */
+
 
     var code = generate(ast, options);
     return {
